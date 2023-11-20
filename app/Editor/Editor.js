@@ -1,6 +1,13 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { printFromConsole } from "./Editor";
 
 export default function Editor() {
+
+  useEffect(() => {
+    console.log("effect!");
+    printFromConsole();
+  }, []);
+
   return (
     <div className="relative h-full w-full">
       <textarea className="absolute h-full w-full resize-none bg-slate-200" />
